@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Raleway:wght@400;500;700&display=swap");
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -13,6 +13,8 @@ html {
 }
 
 body {
+  line-height: 1.5;
+  color: hsl(243deg, 87%, 12%);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -24,6 +26,48 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+input {
+  outline: 0;
+  font-family: inherit;
+  padding: 0.6875rem 1.15rem;
+}
+input::placeholder {
+  color: hsl(0deg, 0%, 75%);
+}
+
+button,
+.button {
+  outline: 0;
+  cursor: pointer;
+  font-weight: 700;
+  position: relative;
+  border: transparent;
+  font-size: 0.875rem;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 0.5px;
+  border-radius: 0.15rem;
+  padding: 0.825rem 1rem;
+  background: hsl(224deg, 93%, 58%);
+  color: hsl(240deg, 75%, 98%);
+}
+button::before,
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  border-radius: 0.15rem;
+  transition: opacity 150ms ease-in-out;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+button:hover::before,
+.button:hover::before {
+  opacity: 1;
 }
 
 .container {
@@ -80,8 +124,9 @@ a {
   }
 }
 .header__links a {
-  color: hsl(243deg, 87%, 12%);
+  font-weight: 500;
   font-size: 0.825rem;
+  color: hsl(243deg, 87%, 12%);
   font-family: "Raleway", sans-serif;
   letter-spacing: -0.35px;
 }
@@ -97,4 +142,68 @@ a {
   .header__links a:not(:last-child) {
     margin-right: 3.15rem;
   }
+}
+
+.hero {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+  grid-template-columns: 1fr;
+  row-gap: 1.75rem;
+}
+@media (min-width: 64em) {
+  .hero {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.hero__text {
+  text-align: center;
+}
+@media (min-width: 64em) {
+  .hero__text {
+    text-align: left;
+  }
+}
+.hero__text h1 {
+  font-size: 1.5rem;
+}
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 2.35rem;
+  }
+}
+.hero__text p {
+  width: auto;
+  font-size: 0.875rem;
+  margin: 1rem 0 1.5rem;
+  letter-spacing: 0.25px;
+}
+@media (min-width: 64em) {
+  .hero__text p {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+.hero__form {
+  width: auto;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 64em) {
+  .hero__form {
+    width: 85%;
+    grid-template-columns: 1fr 0.65fr;
+  }
+}
+.hero__image {
+  order: -1;
+}
+@media (min-width: 64em) {
+  .hero__image {
+    order: 0;
+  }
+}
+.hero__image img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

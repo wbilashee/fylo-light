@@ -1,0 +1,63 @@
+.hero {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+  grid-template-columns: 1fr;
+  row-gap: 1.75rem;
+
+  @include breakpoint-up(large) {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__text {
+    text-align: center;
+
+    @include breakpoint-up(large) {
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+
+      @include breakpoint-up(large) {
+        font-size: 2.35rem;
+      }
+    }
+
+    p {
+      width: auto;
+      font-size: 0.875rem;
+      margin: 1rem 0 1.5rem;
+      letter-spacing: 0.25px;
+
+      @include breakpoint-up(large) {
+        width: 90%;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__form {
+    width: auto;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @include breakpoint-up(large) {
+      width: 85%;
+      grid-template-columns: 1fr 0.65fr;
+    }
+  }
+
+  &__image {
+    order: -1;
+
+    @include breakpoint-up(large) {
+      order: 0;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
