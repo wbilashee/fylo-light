@@ -20,4 +20,81 @@ h1,
 h2,
 h3 {
   font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 78rem;
+  padding-left: 1.45rem;
+  padding-right: 1.45rem;
+}
+
+.flex {
+  display: flex;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+.grid-ai-c {
+  align-items: center;
+}
+
+.header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 40em) {
+  .header {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+}
+.header__logo {
+  height: 1.415rem;
+}
+@media (min-width: 40em) {
+  .header__logo {
+    height: 2.85rem;
+  }
+}
+.header__logo img {
+  width: 4.75rem;
+}
+@media (min-width: 40em) {
+  .header__logo img {
+    width: 9.65rem;
+  }
+}
+.header__links a {
+  color: hsl(243deg, 87%, 12%);
+  font-size: 0.825rem;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: -0.35px;
+}
+@media (min-width: 40em) {
+  .header__links a {
+    font-size: 1rem;
+  }
+}
+.header__links a:not(:last-child) {
+  margin-right: 1rem;
+}
+@media (min-width: 40em) {
+  .header__links a:not(:last-child) {
+    margin-right: 3.15rem;
+  }
 }/*# sourceMappingURL=style.css.map */

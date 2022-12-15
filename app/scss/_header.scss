@@ -1,0 +1,46 @@
+.header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+
+  @include breakpoint-up(medium) {
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+  }
+
+  &__logo {
+    height: 1.415rem;
+
+    @include breakpoint-up(medium) {
+      height: 2.85rem;
+    }
+
+    img {
+      width: 4.75rem;
+
+      @include breakpoint-up(medium) {
+        width: 9.65rem;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      color: $veryDarkBlue;
+      font-size: 0.825rem;
+      font-family: $raleway;
+      letter-spacing: -0.35px;
+
+      @include breakpoint-up(medium) {
+        font-size: 1rem;
+      }
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+
+        @include breakpoint-up(medium) {
+          margin-right: 3.15rem;
+        }
+      }
+    }
+  }
+}
