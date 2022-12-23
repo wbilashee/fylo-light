@@ -31,10 +31,35 @@ a {
 input {
   outline: 0;
   font-family: inherit;
+  border-radius: 0.15rem;
   padding: 0.6875rem 1.15rem;
+  border: 1px solid #767676;
+}
+input.invalid {
+  margin-bottom: 0;
+  border: 1px solid hsl(6deg, 46%, 51%);
+}
+@media (min-width: 64em) {
+  input.invalid {
+    margin-bottom: 1.25rem;
+  }
 }
 input::placeholder {
   color: hsl(0deg, 0%, 75%);
+}
+
+.error {
+  display: none;
+  text-align: left;
+  position: initial;
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+}
+@media (min-width: 64em) {
+  .error {
+    position: absolute;
+    top: 3rem;
+  }
 }
 
 button,
@@ -199,6 +224,8 @@ button:hover::before,
 }
 .hero__form {
   width: auto;
+  position: relative;
+  align-items: baseline;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
@@ -207,6 +234,9 @@ button:hover::before,
     width: 85%;
     grid-template-columns: 1fr 0.65fr;
   }
+}
+.hero__form .error {
+  color: hsl(6deg, 46%, 51%);
 }
 .hero__image {
   order: -1;
@@ -403,6 +433,7 @@ button:hover::before,
 .early-access__form {
   width: 90%;
   margin: auto;
+  position: relative;
   grid-template-columns: 1fr;
   row-gap: 1rem;
 }
@@ -412,9 +443,10 @@ button:hover::before,
   }
 }
 .early-access__form input {
-  border: 0;
-  border-radius: 0.15rem;
-  padding: 0.8rem 1.15rem;
+  padding: 0.725rem 1.15rem;
+}
+.early-access__form .error {
+  color: hsl(240deg, 75%, 98%);
 }
 .early-access__form .button {
   place-self: inherit;

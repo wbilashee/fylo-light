@@ -40,12 +40,18 @@
 
   &__form {
     width: auto;
+    position: relative;
+    align-items: baseline;
     grid-template-columns: 1fr;
     gap: 1rem;
 
     @include breakpoint-up(large) {
       width: 85%;
       grid-template-columns: 1fr 0.65fr;
+    }
+
+    .error {
+      color: $lightRed;
     }
   }
 
