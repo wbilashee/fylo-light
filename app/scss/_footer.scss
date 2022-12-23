@@ -22,14 +22,13 @@
   }
 
   &__desc {
-    grid-template-columns: 0.08fr 1fr;
-
     &:first-child {
       margin-bottom: 0.75rem;
     }
 
     img {
       width: 1rem;
+      margin-right: 0.75rem;
 
       @include breakpoint-up(large) {
         width: auto;

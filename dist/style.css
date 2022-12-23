@@ -481,14 +481,12 @@ button:hover::before,
     grid-template-columns: 1.6fr 1fr 1fr 1fr;
   }
 }
-.footer__desc {
-  grid-template-columns: 0.08fr 1fr;
-}
 .footer__desc:first-child {
   margin-bottom: 0.75rem;
 }
 .footer__desc img {
   width: 1rem;
+  margin-right: 0.75rem;
 }
 @media (min-width: 64em) {
   .footer__desc img {
