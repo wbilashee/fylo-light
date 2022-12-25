@@ -37,6 +37,7 @@
   }
 
   &__links {
+    align-items: baseline;
     flex-direction: column;
 
     a {
@@ -63,22 +64,25 @@
     }
 
     a {
+      i {
+        display: flex;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        color: $lightGrayishBlue;
+        border: 1px solid $lightGrayishBlue;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          color: $brightBlue;
+          border: 1px solid $brightBlue;
+        }
+      }
+
       &:not(:last-child) {
         margin-right: 1rem;
-
-        @include breakpoint-up(large) {
-          margin-right: 0.75rem;
-        }
-      }
-
-      svg path {
-        transition: all 300ms ease-in-out;
-      }
-
-      &:hover {
-        svg path {
-          fill: $brightBlue;
-        }
       }
     }
   }
